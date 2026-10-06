@@ -40,6 +40,23 @@ app.get('/messages', async (req, res) => {
   }
 })
 
+app.get('/about', async (req, res) => {
+  // load all messages from database
+  try {
+    res.json({title: "About Mariam Shafey",
+      paragraphs: ["Hi! My name is Mariam Shafey and I am a Computer Science and Math Major at NYU! This is my 3rd Web(ish) class.","I am very into web design (fullstack) as well game development! I am also taking a game design class this semester and I'm really enjoying it. Thank you for reading!",],
+      imageUrl: "/me.jpg"
+    })
+
+  } catch (err) {
+    console.error(err)
+    res.status(400).json({
+      error: err,
+      status: 'failed to retrieve messages from the database',
+    })
+  }
+})
+
 // a route to handle fetching a single message by its id
 app.get('/messages/:messageId', async (req, res) => {
   // load all messages from database

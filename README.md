@@ -27,7 +27,7 @@ To complete this exercise:
 
 - install and run [docker desktop](https://www.docker.com/get-started)
 - create a [dockerhub](https://hub.docker.com/signup) account
-- run command, `docker run --name mongodb_dockerhub -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=secret -d mongo:latest`
+- run command, `dock`
 
 The back-end code will integrate with this database. However, it may be occasionally useful to interact with the database directly from the command line:
 
